@@ -86,7 +86,7 @@ Cloudflare Worker Dashboard will provide:
 
                      │
 
-          ssh.amirshams.ir
+          ssh.domain.com
 
                      │
 
@@ -220,7 +220,7 @@ Example SSH configuration:
 
 ```sshconfig
 Host orangepi
-    HostName ssh.amirshams.ir
+    HostName ssh.domain.com
     User root
     ProxyCommand cloudflared access tcp --hostname %h
 ```
@@ -318,7 +318,7 @@ Only outbound encrypted connections are used.
 
 ---
 
-## Orange Pi Installation
+## Server Installation
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AmirShams-ir/Smart-Gateway-Server/main/scripts/install.sh | sudo bash

@@ -96,19 +96,16 @@ Cloudflare Worker Dashboard will provide:
 
                      │
 
-        🍊 Smart Gateway Server
+          Smart Gateway Server
 
-            Orange Pi / Debian
+            SBC / Debian Server
 
       ┌──────────┼───────────┐
 
       │          │           │
 
-   SSH Host   Smart DNS   Smart Proxy
+    Host        DNS        Proxy
 
-      │          │           │
-
-   Foxconn     WSL2      Raspberry Pi
 ```
 
 One outbound connection.
@@ -219,7 +216,7 @@ Memory  : 11 MB
 Example SSH configuration:
 
 ```sshconfig
-Host orangepi
+Host tunel
     HostName ssh.domain.com
     User root
     ProxyCommand cloudflared access tcp --hostname %h
@@ -228,7 +225,7 @@ Host orangepi
 Connect with:
 
 ```bash
-ssh orangepi
+ssh tunel
 ```
 
 No public port 22 required.
@@ -307,22 +304,8 @@ Only outbound encrypted connections are used.
 - [ ] Web Dashboard
 - [ ] Multi-Host Manager
 - [ ] Auto Tunnel Provisioning API
-- [ ] Foxconn & WSL Discovery
+- [ ] Client Auto Discovery
 - [ ] Docker Edition
-
----
-
-## One-click Deploy
-
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/AmirShams-ir/Smart-Gateway-Server)
-
----
-
-## Server Installation
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/AmirShams-ir/Smart-Gateway-Server/main/scripts/install.sh | sudo bash
-```
 
 ---
 

@@ -211,24 +211,24 @@ Memory  : 11 MB
 
 ---
 
-## ⚡ Install Cloudflared on Your Client
+# ⚡ Install Cloudflared on Your Client
 
 To access SSH through Cloudflare Tunnel, install **cloudflared** on your local computer.
 
-### Windows
+## Windows
 
 ```powershell
 winget install Cloudflare.cloudflared
 ```
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 ```bash
 curl -fsSL https://pkg.cloudflare.com/install.sh | sudo bash
 sudo apt install cloudflared
 ```
 
-### macOS
+## macOS
 
 ```bash
 brew install cloudflared

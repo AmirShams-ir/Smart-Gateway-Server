@@ -211,7 +211,34 @@ Memory  : 11 MB
 
 ---
 
-# 🔐 SSH Access
+## Install Cloudflared on Your Client
+
+To access SSH through Cloudflare Tunnel, install **cloudflared** on your local computer.
+
+### Windows
+
+```powershell
+winget install Cloudflare.cloudflared
+```
+
+### Debian / Ubuntu
+
+```bash
+curl -fsSL https://pkg.cloudflare.com/install.sh | sudo bash
+sudo apt install cloudflared
+```
+
+### macOS
+
+```bash
+brew install cloudflared
+```
+
+---
+
+# 🔐 SSH Access And Configure SSH Client
+
+Create `~/.ssh/config`
 
 Example SSH configuration:
 
@@ -222,13 +249,17 @@ Host tunel
     ProxyCommand cloudflared access tcp --hostname %h
 ```
 
-Connect with:
+Now connect from anywhere:
 
 ```bash
 ssh tunel
 ```
 
-No public port 22 required.
+🌍 No Static IP
+
+🚫 No Port Forward
+
+🔒 End-to-End Encrypted
 
 ---
 

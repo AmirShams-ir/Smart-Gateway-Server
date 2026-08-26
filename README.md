@@ -211,7 +211,7 @@ Memory  : 11 MB
 
 ---
 
-## Install Cloudflared on Your Client
+## ⚡ Install Cloudflared on Your Client
 
 To access SSH through Cloudflare Tunnel, install **cloudflared** on your local computer.
 

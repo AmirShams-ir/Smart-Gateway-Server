@@ -342,7 +342,7 @@ Apache 2.0 License
 
 <div align="center">
 
-### 🍊 Designed for Orange Pi, Raspberry Pi and Every Debian Server
+### Designed for Orange Pi, Raspberry Pi and Every Debian Server
 
 Made with ❤️ by **AmirShams-ir**
 

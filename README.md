@@ -61,7 +61,7 @@ Traditional home servers require:
 
 **Smart Gateway Server eliminates all of them.**
 
-Your Orange Pi becomes a secure outbound gateway that connects your private LAN to Cloudflare without exposing any inbound ports.
+Your Server becomes a secure outbound gateway that connects your private LAN to Cloudflare without exposing any inbound ports.
 
 ---
 
@@ -82,29 +82,29 @@ Cloudflare Worker Dashboard will provide:
 # 🖥 Architecture
 
 ```text
-                 Internet
+                  Internet
 
-                     │
+                      │
 
-          ssh.domain.com
+                ssh.domain.com
+ 
+                      │
 
-                     │
+                Cloudflare Tunnel
 
-          Cloudflare Tunnel
+                   (HTTP/2)
+ 
+                      │
 
-               (HTTP/2)
+              Smart Gateway Server
 
-                     │
+               SBC / Debian Server
 
-          Smart Gateway Server
+            ┌──────────┼───────────┐
 
-            SBC / Debian Server
+            │          │           │
 
-      ┌──────────┼───────────┐
-
-      │          │           │
-
-    Host        DNS        Proxy
+          Host        DNS        Proxy
 
 ```
 
